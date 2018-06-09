@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Explain how built-in functions work using S3 static website hosting
+Parameters:
+  ParamBucketName: 
+    Description: S3 bucket name where you put html/js/css
+    Type: String
+    ConstraintDescription: must be lowercase letter or numbers
+Resources:
+  FooBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      # Parametersからバケット名に使う値を持ってきている
+      BucketName: !Ref ParamBucketName
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+  BarBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref FooBucket
+      PolicyDocument:
+        Statement:
+        - Effect: Allow
+          Principal:
+            # - Sub関数を使えば${foo}で変数展開できる
+            # - AWS::xxxxで参照される「擬似パラメータ」は宣言無しで使える
+            AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root' #省略形での書き方
+          Action: 's3:*'
+          Resource:
+            Fn::Sub: 'arn:aws:s3:::${FooBucket}/*' #完全名での書き方
+        - Effect: Allow
+          Principal: '*'
+          Action: 's3:GetObject'
+          Resource: !Sub 'arn:aws:s3:::${FooBucket}/*'
+Outputs:
+  S3URL:
+    Description: URL to access the s3-hosted items
+    Value: !GetAtt FooBucket.WebsiteURL

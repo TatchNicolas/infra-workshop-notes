@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+  user: vagrant
+  tasks:
+  - name: basic provisioning
+    apt: name={{item}} state=present update_cache=yes
+    with_items:
+    - python-pip 
+    - jq
+  - name: upgrade pip
+    pip:
+      name: pip
+      extra_args: --upgrade
+  - name: install aws-cli and aws-shell
+    pip:
+      name:
+      - awscli
+      - aws-shell

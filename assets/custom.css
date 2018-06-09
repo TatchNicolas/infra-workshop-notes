@@ -1,0 +1,13 @@
+.reveal .slides h1, 
+.reveal .slides h2, 
+.reveal .slides h3,
+.reveal .slides h4
+{ text-transform: none !important; }
+
+.reveal .slides h1 { font-size: 24pt; }
+.reveal .slides h2 { font-size: 23pt; }
+.reveal .slides h3 { font-size: 22pt; }
+.reveal .slides h4 { font-size: 20pt; }
+.reveal .slides li { font-size: 20pt; }
+.reveal .slides p  { font-size: 20pt; }
+.reveal .slides li > li > li { font-size: 18pt; }

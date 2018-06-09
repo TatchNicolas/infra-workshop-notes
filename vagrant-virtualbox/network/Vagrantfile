@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+
+  # private_network corresponds with Host-Only Adapter of VirtualBox
+  config.vm.network "private_network", ip: "192.168.33.201"
+
+  # with "vagrant-hostsnameupdater", the plugin updates hosts file on the host machine
+  config.vm.hostname = "foo.devel"
+
+  # Install apache to  check http connectivity if you want
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y apache2
+  SHELL
+end

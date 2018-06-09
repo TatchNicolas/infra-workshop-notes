@@ -1,0 +1,6 @@
+[
+  {
+    "ParameterKey": "ParamBucketName",
+    "ParameterValue": "tatch-s3-web-hosting"
+  }
+]
