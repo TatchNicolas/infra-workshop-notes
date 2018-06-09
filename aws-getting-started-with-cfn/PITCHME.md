@@ -163,7 +163,7 @@ aws cloudformation delete-stack --stack-name <スタック名>
 
 ### パラメータ/組み込み関数を使ってみよう
 
-* [サンプルテンプレート](https://github.com/TatchNicolas/infra-workshop/blob/master/aws-getting-started-with-cfn/s3-3.yml)
+* [サンプルテンプレート](https://github.com/TatchNicolas/infra-workshop-notes/blob/master/aws-getting-started-with-cfn/s3-3.yml)
 * `Parameters`をテンプレートで定義すると
    * マネジメントコンソールからの場合はパラメータ設定の画面が出る
    * CLIからは
@@ -188,6 +188,9 @@ aws cloudformation delete-stack --stack-name <スタック名>
    * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html
 * とても良くまとまっているQiita記事
    * https://qiita.com/yasuhiroki/items/8463eed1c78123313a6f
+* Discord上で紹介頂いた記事
+   * https://qiita.com/bisque33/items/51147a65c2ba40417d01
+   * https://qiita.com/y-ohgi/items/89f07e866713185799f5
 
 Note:
 前回の登壇で記事を紹介したら書いたご本人が参加者の中にいた...

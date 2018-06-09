@@ -2,13 +2,11 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: IEEEEEEEE
 Resources:
-  Bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      # S3のバケット名は全世界で一意でないといけないので、
-      # コピペしても動かないよ/先にやられると私が困るよ
-      BucketName: tatch-sample-bucket
   AnotherBucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: tatch-sample-another-bucket
+  FooBarBaz:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: tatch-foo-bar-baz
