@@ -1,0 +1,7 @@
+{
+    "ImageId": "ami-48a45937",
+    "InstanceType": "t2.micro",
+    "Placement": {"AvailabilityZone":"ap-northeast-1a"},
+    "KeyName": "dummy",
+    "SecurityGroups": ["basic"]
+}

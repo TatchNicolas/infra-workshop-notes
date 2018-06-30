@@ -1,0 +1,7 @@
+---
+centos:
+  hosts:
+    192.168.100.20:
+      hoge: fuga
+  vars:
+    foo: bar

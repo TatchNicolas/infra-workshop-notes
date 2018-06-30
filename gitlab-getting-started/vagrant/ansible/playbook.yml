@@ -1,0 +1,5 @@
+---
+- hosts: centos
+  remote_user: tatch
+  roles:
+    - common

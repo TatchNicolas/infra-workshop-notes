@@ -1,0 +1,18 @@
+{
+    "ImageId": "ami-e99f4896",
+    "InstanceType": "t2.micro",
+    "Placement": {"AvailabilityZone":"ap-northeast-1a"},
+    "KeyName": "dummy",
+    "SecurityGroups": ["basic"],
+    "TagSpecifications": [
+        {
+            "ResourceType": "instance",
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "GitLab"
+                }
+            ]
+        }
+    ]
+}
