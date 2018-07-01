@@ -1,6 +1,6 @@
 {
     "ImageId": "ami-e99f4896",
-    "InstanceType": "t2.micro",
+    "InstanceType": "m5.large",
     "Placement": {"AvailabilityZone":"ap-northeast-1a"},
     "KeyName": "dummy",
     "SecurityGroups": ["basic"],
