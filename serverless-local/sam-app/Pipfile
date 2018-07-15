@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "*"
+boto3 = "*"
 
 [dev-packages]
 aws-sam-cli = "*"
@@ -15,3 +16,4 @@ python_version = "3.6"
 
 [scripts]
 vim = 'vim'
+package = 'invoke package'
