@@ -5,10 +5,10 @@ name = "pypi"
 
 [packages]
 requests = "*"
-boto3 = "*"
 
 [dev-packages]
 aws-sam-cli = "*"
+boto3 = "*"
 invoke = "*"
 
 [requires]

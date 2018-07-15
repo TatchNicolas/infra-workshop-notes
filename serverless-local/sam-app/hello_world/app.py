@@ -1,5 +1,5 @@
 import json
-
+import boto3
 import requests
 
 
@@ -15,6 +15,8 @@ def lambda_handler(event, context):
     """
 
     ip = requests.get('http://checkip.amazonaws.com/')
+    buckets = boto3.client('s3').list_buckets()
+    print(buckets)
 
     return {
         "statusCode": 200,
