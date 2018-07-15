@@ -2,8 +2,7 @@
 
 ## TODO
 
-* Why localstack and aws-sam-cli has dependency conflict?
-   * Just leave it, not worhth yak-shaving
+* Write down workflow
 
 ## Prerequisites
 
@@ -16,6 +15,12 @@
 
 ### AWS SAM CLI
 
+* Use pip, not pipenv dev-package
+
 ### localstack
 
+* Use docker-compose
+
 ### invoke
+
+* Install in pipenv dev-packages
